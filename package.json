@@ -1,0 +1,22 @@
+{
+  "name": "dexswap",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "@maticnetwork/maticjs": "^2.0.40",
+    "@openzeppelin/contracts": "^3.1.0",
+    "@openzeppelin/test-helpers": "^0.5.6",
+    "dotenv": "^8.2.0",
+    "truffle": "^5.1.41",
+    "truffle-flattener": "^1.4.4",
+    "truffle-hdwallet-provider": "^1.0.17",
+    "truffle-plugin-verify": "^0.5.8"
+  },
+  "scripts": {
+    "compile": "truffle compile",
+    "deploy:rinkeby": "truffle migrate --network rinkeby",
+    "deploy:matic": "yarn hardhat deploy --network matic  --protocol-fee-native-asset-receiver 0x140B8F40701366145d2908b3aC1a88dD0e62870D  --protocol-fee-fallback-receiver 0xeED588Fc1A009aFf2f4E90b57D4d74B2F56309c5 --token-registry-address 0x52d2026723cd76E1Feae2719aa6F56aBe585030E --token-registry-list-id 1 --native-asset-wrapper-address 0x4DfAe612aaCB5b448C12A591cD0879bFa2e51d62 --owner-address 0x60993D093a39881DbC153312943A6612a1a675b5 --deploy-farming",
+    "deploy:moonbeam": "yarn hardhat deploy --network moonbeam  --protocol-fee-native-asset-receiver 0x140B8F40701366145d2908b3aC1a88dD0e62870D  --protocol-fee-fallback-receiver 0xeED588Fc1A009aFf2f4E90b57D4d74B2F56309c5 --token-registry-address 0x853447b84b0A498831E0731Ff5FFc99b6B515A14 --token-registry-list-id 1 --native-asset-wrapper-address 0xe73763DB808ecCDC0E36bC8E32510ED126910394 --owner-address 0xBfBa42de8147de1B20731bD8150531c50cd10803"
+  }
+}
